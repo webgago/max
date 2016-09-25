@@ -1,0 +1,43 @@
+extends layouts/slides
+
+block content
+
+  // Slide #02
+  section.slide.fade.scenic(name="about")
+    .content
+      .container
+        .wrap
+          include includes/about_us
+    .background(style='background-image:url(images/6.jpg)')
+
+  // Slide #37
+  section.slide.fade.scenic(name="services")
+    .content
+      .container
+        .wrap
+          include includes/services
+    .background(style='background-image:url(images/3.jpg)')
+
+  // Slide #37
+  section.slide.fade.kenBurns(name="products")
+    .content
+      .container
+        .wrap
+          include includes/products
+    .background(style='background-image:url(images/2.jpg)')
+
+  // Slide #37
+  section.slide.fade.kenBurns(name="clients")
+    .content
+      .container
+        .wrap
+          include includes/clients
+    .background(style='background-image:url(images/4.jpg)')
+
+  // Slide #11
+  section.slide.fade.kenBurns(name="contacts")
+    .content
+      .container
+        .wrap
+          include includes/contacts
+    .background(style='background-image:url(images/6.jpg)')
