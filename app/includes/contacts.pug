@@ -7,7 +7,8 @@
     li.col-12-12.col-12-12.ae-2
       h3.little.uppercase.cropBottom MAXIMUM SOURCING CO., LTD
       p.raleway
-        a(href="") Level 46 Bitexco Financial Tower, 2 Hai Trieu Street, District 1, Ho Chi Minh city, Vietnam
+        span.popupTrigger(data-popup-id='map')
+          | Level 46 Bitexco Financial Tower, 2 Hai Trieu Street, District 1, Ho Chi Minh city, Vietnam
 
     li.col-12-12.col-12-12.ae-3
       h3.little.uppercase.cropBottom Call us:
@@ -21,3 +22,13 @@
       p.raleway
         a(href="mailto:info@maximum-sourcing.com") info@maximum-sourcing.com
 
+
+.popup.animated(data-popup-id='map')
+  .close
+    svg
+      use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#close')
+  .content
+    .container
+      .wrap.spaces
+        .fix-6-12.box-55.popupContent
+          iframe(src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3919.5176833825913!2d106.704495!3d10.771606!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f416a93c663%3A0x303cc1f3819ba538!2sCompass+Offices+Bitexco+Financial+Tower%2C+Vietnam!5e0!3m2!1sru!2s!4v1474806536031', width='600', height='450', frameborder='0', style='border:0', allowfullscreen='')
