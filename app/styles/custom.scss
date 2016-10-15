@@ -3,3 +3,16 @@
     height: 400px;
   }
 }
+
+.slide .background {
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+.slide .background.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+.slide .background.shown {
+  opacity: 1;
+  visibility: visible;
+}
