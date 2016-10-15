@@ -8,17 +8,25 @@ jQuery(function() {
     $(backgrounds[index]).addClass('shown')
   });
 
-  $(window).on('slideChange', function(event, number, element){
-    setInterval(function(){
-      if($('.slideshow').hasClass('selected')){
-        let events = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
+  let productsSlideshowId = null;
 
-        let previousBackground = $('.slideshow.selected .background.shown');
-        let nextBackground = $('.slideshow.selected .background.shown').nextOrFirst('.background');
-        nextBackground.addClass('shown');
-        previousBackground.removeClass('shown');
-      }
-    }, 5000);
+  $(window).on('slideChange', function(event, number, element){
+    if(element.attr('name') == 'products') {
+      if(productsSlideshowId) return;
+
+      productsSlideshowId = setInterval(function(){
+        if($('.slideshow').hasClass('selected')){
+          let previousBackground = $('.slideshow.selected .background.shown');
+          let nextBackground = $('.slideshow.selected .background.shown').nextOrFirst('.background');
+
+          nextBackground.addClass('shown');
+          previousBackground.removeClass('shown');
+        }
+      }, 7000);
+    } else {
+      clearInterval(productsSlideshowId);
+      productsSlideshowId = null;
+    }
   });
 })
 

@@ -21,3 +21,9 @@ ul.slider[data-slider-id='services'] {
   opacity: 1;
   visibility: visible;
 }
+
+@media screen and (max-width:1023px) {
+  .tabs {
+    margin: 0 auto;
+  }
+}
