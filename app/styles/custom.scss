@@ -4,6 +4,11 @@
   }
 }
 
+ul.slider[data-slider-id='services'] {
+  height: 150px;
+}
+
+
 .slide .background {
   -webkit-transition: 1s;
   transition: 1s;
