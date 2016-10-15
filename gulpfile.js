@@ -8,6 +8,8 @@ const wiredep = require('wiredep').stream;
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 
+const imagemin = require('gulp-imagemin');
+
 gulp.task('styles', () => {
   return gulp.src('app/styles/*.scss')
     .pipe($.plumber())
@@ -83,6 +85,7 @@ gulp.task('images', () => {
       // as hooks for embedding and styling
       svgoPlugins: [{cleanupIDs: false}]
     })))
+    .pipe(imagemin())
     .pipe(gulp.dest('dist/images'));
 });
 
