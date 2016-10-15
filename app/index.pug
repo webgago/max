@@ -2,7 +2,6 @@ extends layouts/slides
 
 block content
 
-  // Slide #02
   section.slide.fade.scenic(name="about")
     .content
       .container
@@ -10,7 +9,6 @@ block content
           include includes/about_us
     .background(style='background-image:url(images/6.jpg)')
 
-  // Slide #37
   section.slide.fade.scenic(name="services")
     .content
       .container
@@ -20,23 +18,16 @@ block content
     .background.hidden(style='background-image:url(images/services/2.jpg)')
     .background.hidden(style='background-image:url(images/services/3.jpg)')
 
-  // Slide #37
-  section.slide.fade.kenBurns(name="products")
+  section.slide.fade.scenic.slideshow(name="products")
     .content
       .container
         .wrap
           include includes/products
-    .background(style='background-image:url(images/2.jpg)')
 
-  // Slide #37
-  section.slide.fade.kenBurns(name="clients")
-    .content
-      .container
-        .wrap
-          include includes/clients
-    .background(style='background-image:url(images/4.jpg)')
+    .background.hidden.shown(style="background-image:url(images/products/1.jpg)")
+    each n in [2,3,4,5,6,7,8,9,10,11]
+      .background.hidden(style="background-image:url(images/products/" + n + ".jpg)")
 
-  // Slide #11
   section.slide.fade.kenBurns(name="contacts")
     .content
       .container
