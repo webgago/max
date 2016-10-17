@@ -3,6 +3,20 @@
     "rules": "database.rules.json"
   },
   "hosting": {
-    "public": "dist"
+    "public": "dist",
+
+    "headers": [ {
+      "source" : "**/*.@(jpg|jpeg|gif|png|js|css)",
+      "headers" : [ {
+        "key" : "Cache-Control",
+        "value" : "max-age=864000"
+      } ]
+    }, {
+      "source" : "404.html",
+      "headers" : [ {
+        "key" : "Cache-Control",
+        "value" : "max-age=300"
+      } ]
+    } ]
   }
 }
