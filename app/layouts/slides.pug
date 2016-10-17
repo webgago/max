@@ -22,7 +22,6 @@ html
     // Base Path to Scripts
     base(href='./')
 
-    link(href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic,700italic|Raleway:300,500,800|Source+Sans+Pro:100,300,400,600,700,900", rel="stylesheet", type="text/css")
     // build:css styles/all.css
     link(rel='stylesheet', href='styles/all.css')
     // endbuild
@@ -201,12 +200,6 @@ html
         circle.circle(opacity='.1', stroke='#fff', stroke-width='2', stroke-miterlimit='10', cx='9', cy='9', r='8', fill='none')
         circle.dash(stroke-width='2', stroke-linecap='round', stroke-miterlimit='10', stroke-dasharray='1,100', cx='9', cy='9', r='8', fill='none')
 
-
-    // build:js scripts/vendor.js
-    // bower:js
-    script(src='../bower_components/jquery/dist/jquery.js')
-    // endbower
-    // endbuild
 
     // build:js scripts/all.js
     script(src='scripts/all.js')

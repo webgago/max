@@ -28,5 +28,20 @@ jQuery(function() {
       productsSlideshowId = null;
     }
   });
+
+  $('.background.lazy').each(function() {
+    let background = $(this).prop('style')["background-image"];
+    let url = background.replace(/url\("(.*)"\)/, '$1');
+
+    $.cacheImage(url, {
+      load: e => $(this).removeClass('lazy')
+    })
+  })
 })
+
+WebFont.load({
+  google: {
+    families: ['Playfair+Display:400,700,400italic,700italic', 'Raleway:300,500,800', 'Source+Sans+Pro:100,300,400,600,700,900']
+  }
+});
 

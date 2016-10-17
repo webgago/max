@@ -7,16 +7,16 @@ block content
       .container
         .wrap
           include includes/about_us
-    .background(style='background-image:url(images/about_us.jpg)')
+    .background.lazy(style='background-image:url(images/about_us.jpg)')
 
   section.slide.fade.scenic(name="services")
     .content
       .container
         .wrap
           include includes/services
-    .background.shown(style='background-image:url(images/services/1.jpg)')
-    .background.hidden(style='background-image:url(images/services/2.jpg)')
-    .background.hidden(style='background-image:url(images/services/3.jpg)')
+    .background.lazy.shown(style='background-image:url(images/services/1.jpg)')
+    .background.lazy.hidden(style='background-image:url(images/services/2.jpg)')
+    .background.lazy.hidden(style='background-image:url(images/services/3.jpg)')
 
   section.slide.fade.scenic.slideshow(name="products")
     .content
@@ -24,9 +24,9 @@ block content
         .wrap
           include includes/products
 
-    .background.hidden.shown(style="background-image:url(images/products/1.jpg)")
+    .background.lazy.hidden.shown(style="background-image:url(images/products/1.jpg)")
     each n in [2,3,4,5,6,7,8,9,10]
-      .background.hidden(style="background-image:url(images/products/" + n + ".jpg)")
+      .background.lazy.hidden(style="background-image:url(images/products/" + n + ".jpg)")
 
   section.slide.fade.kenBurns(name="contacts")
     .content
