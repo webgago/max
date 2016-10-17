@@ -28,8 +28,28 @@ ul.slider[data-slider-id='services'] {
   .tabs {
     margin: 0 auto;
   }
+
+  h2.quicksand {
+    font-size: 25px;
+  }
 }
 
 .background.lazy {
   background-image: none!important;
+}
+
+.scenic:not(.video) .background,
+.scenic.active:not(.video) .background.hidden{
+  -webkit-animation-play-state: paused!important; /* Chrome, Safari, Opera */
+  animation-play-state: paused!important;
+}
+
+.scenic.active:not(.video) .background,
+.scenic.active:not(.video) .background.hidden.shown{
+  -webkit-animation-play-state: running!important; /* Chrome, Safari, Opera */
+  animation-play-state: running!important;
+}
+
+.social li {
+  display: inline-block;
 }

@@ -30,9 +30,10 @@ jQuery(function() {
   });
 
   $('.background.lazy').each(function() {
-    let background = $(this).prop('style')["background-image"];
-    let url = background.replace(/url\("(.*)"\)/, '$1');
+    let background = $(this).prop('style')['background-image'];
+    let url = background.replace(/url\("?(.*?)"?\)/, '$1');
 
+    console.log(url)
     $.cacheImage(url, {
       load: e => $(this).removeClass('lazy')
     })
