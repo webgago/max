@@ -12,7 +12,7 @@ const imagemin = require('gulp-imagemin');
 
 const concat = require('gulp-concat');
 const mainBowerFiles = require('main-bower-files')
-
+const inline = require('gulp-inline');
 
 gulp.task('styles', () => {
   return gulp.src('app/styles/*.scss')
@@ -190,6 +190,13 @@ gulp.task('wiredep', () => {
 });
 
 gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
+  gulp.src('dist/index.html')
+    .pipe(inline({
+      base: 'dist/',
+      disabledTypes: ['svg', 'img', 'js'] // Only inline css files
+    }))
+    .pipe(gulp.dest('dist/'));
+
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
