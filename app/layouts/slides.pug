@@ -18,9 +18,7 @@ html
 
     // Page title
     title Complete garment manufacturing solutions in Vietnam, Cambodia, Myanmar and Bangladesh
-    // Fonts
-    link(href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic,700italic|Raleway:300,500,800|Source+Sans+Pro:100,300,400,600,700,900', rel='stylesheet', type='text/css')
-    link(href="http://fonts.googleapis.com/css?family=Quicksand", rel="stylesheet", type="text/css")
+
     // Base Path to Scripts
     base(href='./')
 
@@ -29,14 +27,9 @@ html
     // endbower
     // endbuild
 
-    // build:css styles/main.css
-    link(rel='stylesheet', href='styles/main.css')
+    // build:css styles/all.css
+    link(rel='stylesheet', href='styles/all.css')
     // endbuild
-    // build:css styles/custom.css
-    link(rel='stylesheet', href='styles/custom.css')
-    // endbuild
-    style.
-      .quicksand { font-family: 'Quicksand', sans-serif }
 
   body.slides.zoom.smooth.horizontal.animated
     // SVG Library
@@ -152,7 +145,7 @@ html
     nav.panel.top
       .sections.desktop
         .left
-          a(href='#')
+          a(href='#about')
             svg(style='width:200px;height:60px')
               use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#logo')
 
@@ -171,7 +164,7 @@ html
 
       .sections.compact.hidden
         .left
-          a(href='#')
+          a(href='#about')
             svg(style='width:200px;height:60px')
               use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#logo')
         .right
@@ -185,7 +178,7 @@ html
         svg
           use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#close')
       .content
-        a.logo(href='#')
+        a.logo(href='#about')
           svg(width='200', height='60')
             use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#logo')
         ul.mainMenu.uppercase
@@ -200,7 +193,7 @@ html
 
         ul.social
           li
-            a(href='https://fb.com/maximumsourcing')
+            a(href='https://fb.com/garmentfactoryinvietnam/')
               svg
                 use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#facebook')
 
@@ -219,13 +212,6 @@ html
     // endbower
     // endbuild
 
-    // build:js scripts/custom.js
-    script(src='scripts/custom.js')
-    // endbuild
-
-    // build:js scripts/plugins.js
-    script(src='scripts/plugins.js')
-    // endbuild
-    // build:js scripts/slides.js
-    script(src='scripts/slides.js')
+    // build:js scripts/all.js
+    script(src='scripts/all.js')
     // endbuild

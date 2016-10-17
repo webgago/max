@@ -10,6 +10,10 @@ const reload = browserSync.reload;
 
 const imagemin = require('gulp-imagemin');
 
+const concat = require('gulp-concat');
+const mainBowerFiles = require('main-bower-files')
+
+
 gulp.task('styles', () => {
   return gulp.src('app/styles/*.scss')
     .pipe($.plumber())
@@ -20,16 +24,24 @@ gulp.task('styles', () => {
       includePaths: ['.']
     }).on('error', $.sass.logError))
     .pipe($.autoprefixer({browsers: ['> 1%', 'last 2 versions', 'Firefox ESR']}))
+    .pipe($.sourcemaps.init())
+    .pipe(concat('all.css'))
+    .pipe($.cssnano())
     .pipe($.sourcemaps.write())
     .pipe(gulp.dest('.tmp/styles'))
     .pipe(reload({stream: true}));
 });
 
 gulp.task('scripts', () => {
-  return gulp.src('app/scripts/**/*.js')
+  var vendors = mainBowerFiles();
+  var src = vendors.concat('app/scripts/**/*.js');
+
+  return gulp.src(src)
     .pipe($.plumber())
     .pipe($.sourcemaps.init())
     .pipe($.babel())
+    .pipe($.uglify())
+    .pipe(concat('all.js'))
     .pipe($.sourcemaps.write('.'))
     .pipe(gulp.dest('.tmp/scripts'))
     .pipe(reload({stream: true}));

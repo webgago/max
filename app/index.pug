@@ -7,7 +7,7 @@ block content
       .container
         .wrap
           include includes/about_us
-    .background(style='background-image:url(images/6.jpg)')
+    .background(style='background-image:url(images/about_us.jpg)')
 
   section.slide.fade.scenic(name="services")
     .content
@@ -25,7 +25,7 @@ block content
           include includes/products
 
     .background.hidden.shown(style="background-image:url(images/products/1.jpg)")
-    each n in [2,3,4,5,6,7,8,9,10,11]
+    each n in [2,3,4,5,6,7,8,9,10]
       .background.hidden(style="background-image:url(images/products/" + n + ".jpg)")
 
   section.slide.fade.kenBurns(name="contacts")
@@ -33,4 +33,4 @@ block content
       .container
         .wrap
           include includes/contacts
-    .background(style='background-image:url(images/bitexco.jpg)')
+    .background(style='background-image:url(images/contacts.jpg)')
