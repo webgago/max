@@ -42,7 +42,7 @@ jQuery(function() {
 
 WebFont.load({
   google: {
-    families: ['Playfair+Display:400,700,400italic,700italic', 'Raleway:300,500,800', 'Source+Sans+Pro:100,300,400,600,700,900']
+    families: ['Playfair+Display:400,700,400italic,700italic', 'Raleway:300,500,800', 'Quicksand:400,600']
   }
 });
 
