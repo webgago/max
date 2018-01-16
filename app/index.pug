@@ -28,6 +28,14 @@ block content
     each n in [2,3,4,5,6,7,8,9,10]
       .background.lazy.hidden(style="background-image:url(images/products/" + n + ".jpg)")
 
+  section.slide.fade.scenic.slideshow(name="partners")
+    .content
+      .container
+        .wrap
+          include includes/partners
+
+    .background.lazy.hidden.shown(style="background-image:url(images/adventure.jpg)")
+
   section.slide.fade.scenic(name="contacts")
     .content
       .container
