@@ -34,7 +34,12 @@ gulp.task('styles', () => {
 
 gulp.task('scripts', () => {
   var vendors = mainBowerFiles();
-  var src = vendors.concat('app/scripts/**/*.js');
+  var src = vendors.concat(
+    'app/scripts/plugins.js',
+    'app/scripts/slides.js',
+    'app/scripts/custom.js',
+    'app/scripts/**/*.js'
+  );
 
   return gulp.src(src)
     .pipe($.plumber())

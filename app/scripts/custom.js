@@ -1,4 +1,4 @@
-jQuery(function() {
+jQuery(function($) {
   let slider = $('.controller[data-slider-id="services"]');
   let backgrounds = $('.slide[name="services"] .background');
 
@@ -33,7 +33,6 @@ jQuery(function() {
     let background = $(this).prop('style')['background-image'];
     let url = background.replace(/url\("?(.*?)"?\)/, '$1');
 
-    console.log(url)
     $.cacheImage(url, {
       load: e => $(this).removeClass('lazy')
     })
